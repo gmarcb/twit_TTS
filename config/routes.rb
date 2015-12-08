@@ -1,9 +1,25 @@
 Rails.application.routes.draw do
+  root 'epicenter#feed'
+
+  get 'user_profile' => 'epicenter#show_user'
+
+  post 'now_following' => "epicenter#now_following"
+
+  post 'unfollow' => "epicenter#unfollow"
+
+  get 'epicenter/feed'
+
+  get 'epicenter/show_user'
+
+  get 'epicenter/now_following'
+
+  get 'epicenter/unfollow'
+
   devise_for :users
 
   resources :tweets
 
-  root 'tweets#index'
+ 
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

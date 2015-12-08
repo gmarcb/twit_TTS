@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ .cant-see-me{
+ 	display: none;
+ }
+
 
  body {
 	background-image: url("http://7-themes.com/data_images/out/26/6858326-twitter-wallpaper.jpg");
