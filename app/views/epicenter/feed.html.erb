@@ -5,7 +5,7 @@
 	</div>
 </div>
 
-<div class="row">
+<div class="row container">
 		<div class="current-user-profile-box col-md-4 panel panel-default">
 			<div class="panel-body">
 				<div class="row">
@@ -23,20 +23,21 @@
 					</div>
 					<div class="col-md-4">
 						<span class="small-text">FOLLOWERS</span><br>
-						<%= @follow_count %>
+						<%= @follower_count %>
 					</div>
 				</div>
 			</div>
 		</div>
-
 		<% @following_tweets.each do |tweet| %>
-		<div class="following-feed-box col-md-10 col-md-offset-1 panel panel-default">
-			<div class="panel-body">
+			<div class="following-feed-box col-md-10 col-md-offset-1 panel panel-default">
+				<div class="panel-body">
 					<p>
 			           <strong><%= link_to tweet.user.username, user_profile_path(id:tweet.user.id) %></strong><br>
 						<%= tweet.message %>
 
 					</p>
+				</div>
+			</div>
 					<% end %>
 			  </div>
 		</div>
