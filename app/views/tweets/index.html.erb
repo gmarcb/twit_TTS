@@ -1,28 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>All Your Tweets!</h1>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h1>Every Single Tweet... EVER</h1>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Message</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @t.each do |x| %>
-      <tr>
-        <td><%= x.message %></td>
-        <td><%= link_to x.user.username, user_profile_path(id: x.user.id) %></td>
-        <td><%= link_to 'Show', x %></td>
-        <td><%= link_to 'Edit', edit_tweet_path(x) %></td>
-        <td><%= link_to 'Destroy', x, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @t.each do |x| %>
+<div class="following-feed-box col-md-12 panel panel-default">
+    <div class="panel-body">
+    
+    <div class="row">
+      <p class="col-md-10"><%= link_to x.user.username, user_profile_path(id: x.user.id) %></p>
+      <p class="col-md-2"><%= time_ago_in_words x.created_at, class: "time-text" %> ago</p>
+    </div>
+        <p><%= x.message %></p>      
+    
+      </div>
+  </div>
+  <% end %>
 
 <br>
 
-<%= link_to 'New Tweet', new_tweet_path %>
+<%= link_to 'New Tweet', new_tweet_path, class: "btn btn-primary" %>
+
+

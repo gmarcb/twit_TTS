@@ -18,6 +18,10 @@
  	display: none;
  }
 
+ .new {
+ 	padding: 1px;
+ }
+
 
  body {
 	background-image: url("http://7-themes.com/data_images/out/26/6858326-twitter-wallpaper.jpg");
@@ -25,8 +29,12 @@
 	background-position: left top; 
 		}
 
-h1, h2, h3, th {
+h2, h3, th {
 	color: #ffffff;
+}
+
+.small-text {
+	font-size: 11px;
 }
 
 
