@@ -30,7 +30,7 @@
 		</div>
 
 		<% @following_tweets.each do |tweet| %>
-		<div class="following-feed-box col-md-8 col-md-offset-1 panel panel-default">
+		<div class="following-feed-box col-md-10 col-md-offset-1 panel panel-default">
 			<div class="panel-body">
 					<p>
 			           <strong><%= link_to tweet.user.username, user_profile_path(id:tweet.user.id) %></strong><br>
