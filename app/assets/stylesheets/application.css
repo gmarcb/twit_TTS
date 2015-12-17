@@ -24,10 +24,11 @@
 
 
  body {
-	background-image: url("http://7-themes.com/data_images/out/26/6858326-twitter-wallpaper.jpg");
-	background-attachment: fixed;
-	background-position: left top; 
-		}
+ 	background-image: url('http://ethankr.me/img/downloads/light-blue-desktop.png');
+	
+    bottom: 200px;
+    right: 0;
+   	}
 
 h2, h3, th {
 	color: #ffffff;
